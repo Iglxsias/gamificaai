@@ -341,3 +341,88 @@ h2 {
     margin-bottom: 15px;
 
 }
+
+.campo input, .campo-descricao textarea {
+    font-family: "Montserrat";
+    font-size: 17px;
+}
+
+.campo input::placeholder, 
+.campo-descricao textarea::placeholder{
+    color: #b9b9b9;
+}
+
+.campo input:focus, .campo-descricao textarea:focus {
+    outline: 2px solid var(--laranja-gamifica);
+}
+
+#contato form button {
+    width: 60%;
+    height: 40px;
+
+    background-color: var(--laranja-gamifica);
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    font-size: 17px;
+    font-family: "Montserrat";
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: background-color 500ms;
+}
+
+#contato form button:hover {
+    background-color: #ad4929;
+}
+
+footer {
+    background-color: var(--roxo-gamifica);
+
+    height: 290px;
+}
+
+footer .contaneir-grid {
+height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.redes-sociais {
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.redes-sociais p {
+    color: #fff;
+
+    font-family: "Anta";
+    font-size: 24px;
+}
+
+.icones-redes {
+    width: 240px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.icones-redes a {
+    color: white;
+}
+
+.icones-redes a:hover {
+    color: var(--laranja-gamifica);
+}
