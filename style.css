@@ -477,6 +477,11 @@ footer .contaneir-grid {
 /* OK - Favicon */
 /* Animacao banner */
 
+.menu-fechado {
+    display: none;
+}
+
+
 @media screen and (max-width: 1300px) {
     header {
         position: relative;
