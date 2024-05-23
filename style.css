@@ -69,6 +69,37 @@ html {
     right: 4%;
 }
 
+.botoes {
+    width: 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    bottom: 4%;
+
+    /* /centralizar usando position */
+    /* adicionar left 50% */
+    /* usar funcao calc() para subtrair matade da largura do elemento Ex:  */
+
+    left: calc(50% - 75px);
+}
+
+.botoes button {
+    width: 30px;
+
+    display: unset;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botoes button svg {
+    fill: #ffffff76;
+}
+
 .primeiro-banner {
     background-image: linear-gradient(90deg, rgba(53,24,104,1) 0%, rgba(53,24,104,0.8) 100%), url(img/bg-room\ 1.png) ;
 }
