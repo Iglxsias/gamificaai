@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Montserrat';
-    src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
 }
 
 :root {
@@ -8,7 +8,7 @@
     --laranja-gamifica: #f06638;
 }
 
-/*Reset CSS*/
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -20,27 +20,93 @@ html {
     scroll-behavior: smooth;
 }
 
-.contaneir-grid {
-    width: 80%;
+.container-grid {
+    width: 80vw;
     max-width: 1400px;
 
-    /* margin: 20px - Espacamento externo de 20px */
-    /* margin: 20px 10px - Espacamento 20px na vertical, 10px na horizontal */
-    /* margin: 20px 10px 5px - Espacamento 20px para cima, 10px na horizontal, 5px para baixo */
-    /* margin: 20px 10px 5px 2px - Espacamento 20px para cima ,10px para a direita, 5px para baixo, 2px para a esquerda */
+    /* margin: 20px - Espaçamento externo de 20px */
+    /* margin: 20px 10px - Espaçamento 20px na vertical, 10px na horizontal */
+    /* margin: 20px 10px 5px - Espaçamento 20px para cima, 10px na horizontal, 5px para baixo */
+    /* margin: 20px 10px 5px 2px - Espaçamento 20px para cima, 10px para a direita, 5px para baixo, 2px para a esquerda */
 
     margin: 0 auto;
 }
 
 .banner {
-    /* vh é a porcentagem da altura da tela */
-    /* vw é a porcentagem da largura da tela */
+    /* vh é a porcentagem da ALTURA da tela */
+    /* vw é a porcentagem da LARGURA da tela */
     height: 100vh;
 
-    background-image: linear-gradient(90deg, rgba(53, 24, 104, 1) 0%, rgba(53, 24, 103, 0.8) 100%), url(img/bg-room\ 1.png);
     background-repeat: no-repeat;
+
     background-position: 165% 40%;
 
+    position: relative;
+}
+
+.primeiro-banner {
+    background-image: linear-gradient(90deg, rgba(53, 24, 104, 1) 0%, rgba(53, 24, 104, 0.8) 100%), url(img/bg-room.png);
+}
+
+.segundo-banner {
+    background-image: linear-gradient(90deg, rgba(24, 104, 36, 1) 0%, rgba(24, 104, 36, 0.8) 100%), url(img/bg-room.png);
+}
+
+.terceiro-banner {
+    background-image: linear-gradient(90deg, rgba(104, 24, 48, 1) 0%, rgba(53, 24, 104, 0.8) 100%), url(img/bg-room.png);
+}
+
+#botao-voltar, #botao-proximo {
+    width: 30px;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    position: absolute;
+}
+
+#botao-voltar svg, #botao-proximo svg {
+    fill: #ffffff76;
+}
+
+#botao-voltar {
+    left: 4%;
+}
+
+#botao-proximo {
+    right: 4%;
+}
+
+.botoes {
+    width: 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    bottom: 4%;
+
+    /* Centralizar usando position */
+    /* Adicionar left 50% */
+    /* Usar função calc() para subtrair metade da largura do elemento Ex.: 75px */
+    left: calc(50% - 75px);    
+}
+
+.botoes button {
+    width: 30px;
+
+    display: unset;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botoes button svg {
+    fill: #ffffff76;
 }
 
 header {
@@ -49,13 +115,14 @@ header {
 
 header button {
     display: none;
+    cursor: pointer;
 }
 
 header img {
     width: 234px;
 }
 
-header .contaneir-grid {
+header .container-grid {
     height: 100%;
 
     display: flex;
@@ -67,7 +134,6 @@ header .contaneir-grid {
     width: 700px;
 
     display: flex;
-
     justify-content: space-between;
 }
 
@@ -75,23 +141,21 @@ header .contaneir-grid {
     font-size: 18px;
     font-family: 'Anta';
 
-
     color: white;
 
     text-decoration: underline transparent;
     text-decoration-thickness: 2px;
 
-    transition: text-decoration 500ms ease;
-
+    transition: text-decoration 500ms ease;    
 }
 
 .menu a:hover {
     text-decoration-color: white;
-
 }
 
 .conteudo-banner {
     height: calc(100vh - 280px);
+
     display: flex;
     align-items: center;
 }
@@ -99,9 +163,8 @@ header .contaneir-grid {
 .conteudo-banner p {
     color: white;
 
-    font-family: 'Anta';
+    font-family: "Anta";
     font-size: 32px;
-
 }
 
 .conteudo-banner span {
@@ -112,23 +175,23 @@ header .contaneir-grid {
     border-right: 5px solid var(--laranja-gamifica);
     white-space: nowrap;
 
-    animation:
+    animation: 
         digitando 2s steps(40, end),
-        cursor 0.75s step-end infinite;
+        cursor 0.75s step-end infinite
+    ;
 }
 
 @keyframes digitando {
     from {
-        width: 0
+        width: 0;
     }
 
     to {
-        width: 100%
+        width: 100%;
     }
 }
 
 @keyframes cursor {
-
     from,
     to {
         border-color: transparent;
@@ -148,17 +211,16 @@ header .contaneir-grid {
     justify-content: space-between;
 
     text-align: center;
-
 }
 
 h2 {
-    font-family: 'Anta';
+    font-family: "Anta";
     font-size: 28px;
 }
 
 #sobre p {
+    font-family: "Montserrat";
     font-size: 17px;
-    font-family: 'Montserrat';
 
     text-align: left;
 
@@ -176,12 +238,12 @@ h2 {
     margin-bottom: 70px;
 }
 
+.container-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
 .card {
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-
-    border-radius: 4px;
-
     height: 400px;
     width: 250px;
 
@@ -190,9 +252,14 @@ h2 {
     justify-content: space-between;
     align-items: center;
 
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
 
-    background-color: var(--roxo-gamifica)
+    background-color: var(--roxo-gamifica);
+
+    border-radius: 4px; 
+
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .card img {
@@ -200,13 +267,12 @@ h2 {
     width: 100%;
 
     border-radius: 4px 4px 0px 0px;
-
 }
 
 .card p {
     color: white;
 
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 16px;
 
     text-align: left;
@@ -215,32 +281,27 @@ h2 {
 }
 
 .card button {
-    border: none;
-    border-radius: 4px;
-
-    cursor: pointer;
-
-    font-family: 'Montserrat';
-    font-size: 17px;
-    font-weight: 600;
-
-    color: white;
-
-    transition: background-color 500ms ease;
-
     width: 90%;
     height: 40px;
 
-    background-color: var(--laranja-gamifica)
+    background-color: var(--laranja-gamifica);
+
+    border: none;
+    border-radius: 4px;
+
+    color: white;
+
+    font-family: "Montserrat";
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 500ms ease;
 }
 
 .card button:hover {
     background-color: #ad4929;
-}
-
-.contaneir-cards {
-    display: flex;
-    justify-content: space-between;
 }
 
 #portfolio {
@@ -263,11 +324,11 @@ h2 {
     background-color: #47208bc2;
 
     position: absolute;
-    top: 0px;
-
+    top: 0;
+    left: 0;
 }
 
-#portfolio .contaneir-grid {
+#portfolio .container-grid {
     height: 100%;
 
     display: flex;
@@ -278,23 +339,20 @@ h2 {
 #portfolio a {
     width: fit-content;
 
-    color: white;
-
-    font-family: 'Anta';
+    color: white;  
+    
+    font-family: "Anta";
     font-size: 28px;
 
-    z-index: 7;
+    z-index: 1;
 
     transition: 200ms;
-
 }
 
 #portfolio a:hover {
     transform: scale(1.05);
-
     transition: 200ms;
 }
-
 
 #contato {
     text-align: center;
@@ -313,17 +371,16 @@ h2 {
     margin: 0 auto;
     padding: 60px 0;
 
-    background-color: var(--roxo-gamifica);
-    border-radius: 80px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
 
+    border-radius: 80px;
+    background-color: var(--roxo-gamifica);
+
+    color: white;
     font-family: "Montserrat";
     font-size: 17px;
-
 }
 
 .campo {
@@ -331,13 +388,11 @@ h2 {
 
     text-align: left;
 
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     margin-bottom: 50px;
-
 }
 
 .campo-descricao {
@@ -380,21 +435,18 @@ h2 {
     resize: none;
 }
 
-.campo label,
-.campo-descricao label {
+.campo label, .campo-descricao label {
     margin-bottom: 15px;
-
 }
 
-.campo input,
-.campo-descricao textarea {
+.campo input, .campo-descricao textarea {
     font-family: "Montserrat";
     font-size: 17px;
 }
 
 .campo input::placeholder,
 .campo-descricao textarea::placeholder {
-    color: #b9b9b9;
+    color: #a0a0a0;
 }
 
 .campo input:focus,
@@ -403,8 +455,8 @@ h2 {
 }
 
 #contato form button {
-    width: 60%;
     height: 40px;
+    width: 60%;
 
     background-color: var(--laranja-gamifica);
     color: white;
@@ -414,7 +466,7 @@ h2 {
 
     font-size: 17px;
     font-family: "Montserrat";
-    font-weight: 700;
+    font-weight: 700; /* Bold */
 
     text-transform: uppercase;
 
@@ -428,23 +480,22 @@ h2 {
 }
 
 footer {
-    background-color: var(--roxo-gamifica);
-
     height: 290px;
+
+    background-color: var(--roxo-gamifica);
 }
 
-footer .contaneir-grid {
+footer .container-grid {
     height: 100%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .redes-sociais {
     height: 50%;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -475,12 +526,15 @@ footer .contaneir-grid {
 
 /* OK - Scroll nos links */
 /* OK - Favicon */
-/* Animacao banner */
+/* Animação do banner */
 
 .menu-fechado {
     display: none;
 }
 
+#icone-barras {
+    display: none;
+}
 
 @media screen and (max-width: 1300px) {
     header {
@@ -499,7 +553,7 @@ footer .contaneir-grid {
     header svg {
         fill: white;
     }
-
+    
     nav.menu {
         height: 500px;
         width: 350px;
@@ -514,195 +568,22 @@ footer .contaneir-grid {
         position: absolute;
         top: 165px;
         right: 0px;
-
     }
-}
 
-#sobre {
-    padding: 100px 15%;
-}
-
-#card {
-    height: 320px;
-    width: 200px;
-}
-
-#contato form {
-    width: 75%;
-}
-
-@media screen and (max-width: 1080px) {
-    .contaneir-cards {
-        flex-wrap: wrap;
+    #sobre {
+        padding: 100px 15%;
     }
 
     .card {
-        height: 400px;
-
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: 40%;
+        height: 320px;
+        width: 200px;
     }
 
-    footer {
-        height: unset;
-    }
-
-    footer .contaneir-grid {
-        padding: 80px;
-        flex-direction: column;
-    }
-
-    footer img {
-        margin-bottom: 100px;
-    }
-
-    footer p{
-        width: 100%;
-
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    .redes-sociais {
-        align-items: center;
-    }
-}
-
-@media screen and (max-width: 800px){
-    .card{
-        flex-basis: 45%;
-    }
-}
-
-@media screen and (max-width: 700px){ 
-    #sobre {
-        height: unset;
-        margin-bottom: 40px;
-    }
-
-    #sobre h2{
-        margin-bottom: 50px;
-    }
-
-    #sobre p {
-        margin-bottom: 30px;
-    }
-
-    #sobre,
-    #contato {
-        margin-bottom: unset;
-    }
-
-    #potfolio a{
-        width: 100%;
-        text-align: center;
-    }
-
-    .campo,
-    .campo-descricao,
-    #contato form button{
+    #contato form {
         width: 75%;
     }
 }
 
-@media screen and (max-width: 520px) {
-    .contaneir-grid {
-        width: 90%;
-    }
-
-    header img{
-        width: 200px;
-    }
-
-    .banner{
-        background-size: cover;
-    }
-
-    .conteudo-banner p{
-        font-size: 24px;
-    }
-
-    nav.menu{
-        width: 100%;
-
-        display: none;
-    }
-
-    #sobre {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-
-    #sobre p{
-        width: 90%;
-        margin:0 auto;
-        margin-bottom: 20px;
-    }
-
-    #cases.contaneir-grid {
-        width: 100%;
-        margin: unset;
-    }
-
-    .contaneir-cards{
-        flex-wrap: nowrap;
-
-        gap: 40px;
-
-        overflow-x: auto;
-    }
-
-    .card{
-        height: 400px;
-        width: 280px;
-
-        flex-basis: unset;
-    }
-
-    .card:first-child{
-        margin-left: 30px;
-    }
-
-    .card:last-child{
-        margin-right: 30px;
-    }
-
-    #portfolio{
-        margin-bottom: 0;
-    }
-
-    #contato{
-        padding-top: 150px;
-
-        background-color: var(--roxo-gamifica);
-        color: white;
-    }
-
-    #contato h2{
-        margin-bottom: 0;
-    }
-
-    #contato form{
-        width: 100%;
-        border-radius: 0;
-    }
-}
-
-@media screen and (max-width:400px){
-    header img{
-        width: 160px;
-    }
-
-    header svg{
-        width: 40px;
-    }
-
-    .conteudo-banner p{
-        font-size: 20px;
-    }
-
-    footer img{
-        width: 200px;
-    }
+@media screen and (max-width: 1080px) {
+    
 }
